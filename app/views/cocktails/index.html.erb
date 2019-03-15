@@ -1,0 +1,13 @@
+<h1>Cocktails</h1>
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li class="no-bullets" >
+      <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Cocktail", new_cocktail_path, class: "btn btn-primary" %>
+
+
